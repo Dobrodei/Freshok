@@ -1,0 +1,13 @@
+.container {
+  max-width: 1320px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px
+}
+
+body {
+  @extend %Sans-Regular;
+  font-size: 14px;
+  color: $def-text;
+  line-height: 1.4;
+}
