@@ -1,8 +1,6 @@
-.container {
-  max-width: 1320px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 15px
+html,
+body {
+  height: 100%;
 }
 
 body {
@@ -10,4 +8,34 @@ body {
   font-size: 14px;
   color: $def-text;
   line-height: 1.4;
+  letter-spacing: 0.03em;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.container {
+  max-width: 1320px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px
+}
+
+
+*::before,
+*::after {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.btn {
+  font-size: 18px;
+  padding: 12px 24px;
+  background-color: $accent;
+  color: #fff;
+  border-radius: 6px;
 }
