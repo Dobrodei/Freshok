@@ -21,6 +21,7 @@
     position: relative;
     padding-left: 44px;
     transition: opacity 0.2s ease-in;
+    text-transform: uppercase;
   }
 
   &-link:not(:last-child) {
@@ -57,6 +58,7 @@
 
   &-link {
     transition: opacity 0.2s ease-in;
+    text-transform: uppercase;
   }
 }
 
