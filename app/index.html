@@ -107,7 +107,7 @@
             </ul>
           </div>
           <form action="" class="header__form">
-            <input class="header__form-search" type"search" placeholder="Найти в магазине ...">
+            <input class="input header__form-search" type"search" name="search" placeholder="Найти в магазине ..." required>
             <button class="header__form-btn" type="button">поиск</button>
           </form>
           <div class="header__user">
@@ -328,7 +328,7 @@
               </div>
             </article>
           </li>
-          <li class="filter__product-item mix category-b">
+          <li class="filter__product-item mix category-b" data-order="4">
             <article class="filter__product-article filter__product-article--new" href="#">
               <a href="" class="filter__product-like">
                 <svg width="32" height="29" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -351,7 +351,7 @@
               </div>
             </article>
           </li>
-          <li class="filter__product-item mix category-b">
+          <li class="filter__product-item mix category-b" data-order="5">
             <article class="filter__product-article filter__product-article--hit" href="#">
               <a href="" class="filter__product-like">
                 <svg width="32" height="29" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -374,7 +374,7 @@
               </div>
             </article>
           </li>
-          <li class="filter__product-item mix category-c">
+          <li class="filter__product-item mix category-c" data-order="6">
             <article class="filter__product-article filter__product-article--sale30" href="#">
               <a href="" class="filter__product-like">
                 <svg width="32" height="29" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -397,7 +397,7 @@
               </div>
             </article>
           </li>
-          <li class="filter__product-item mix category-d">
+          <li class="filter__product-item mix category-d" data-order="7">
             <article class="filter__product-article filter__product-article--new" href="#">
               <a href="" class="filter__product-like">
                 <svg width="32" height="29" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -420,7 +420,7 @@
               </div>
             </article>
           </li>
-          <li class="filter__product-item mix category-d">
+          <li class="filter__product-item mix category-d" data-order="8">
             <article class="filter__product-article" href="#">
               <a href="" class="filter__product-like">
                 <svg width="32" height="29" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -444,7 +444,210 @@
             </article>
           </li>
         </ul>
-        <a href="" class="filter__product-btn ">Показать еще</a>
+        <a href="" class="filter__product-btn btn">Показать еще</a>
+      </div>
+    </section>
+    <section class="section banner">
+      <div class="container">
+        <ul class="banner__inner">
+          <li class="banner__inner-item" style="background-image: url('images/banner/1.jpg');">
+            <h3 class="banner__inner-title">
+              Свежайшие фрукты
+            </h3>
+            <h4 class="banner__inner-subtitle">
+              НАЧНИ ФРУКТОВОЕ ЛЕТО
+              ВСЕГО От 99 ₽
+            </h4>
+            <a class="banner__inner-link" href="#">
+              ПЕРЕЙТИ К ПОКУПКАМ
+            </a>
+          </li>
+          <li class="banner__inner-item" style="background-image: url('images/banner/2.jpg');">
+            <h3 class="banner__inner-title">
+              СЕЗОННАЯ РАСПРОДАЖА
+            </h3>
+            <h4 class="banner__inner-subtitle">
+              ОВОЩЕПАД
+              ДО -50%
+            </h4>
+            <a class="banner__inner-link" href="#">
+              ПЕРЕЙТИ К ПОКУПКАМ
+            </a>
+          </li>
+          <li class="banner__inner-item" style="background-image: url('images/banner/3.jpg');">
+            <h3 class="banner__inner-title">
+              НЯМ-НЯМ
+            </h3>
+            <h4 class="banner__inner-subtitle">
+              СВЕЖИЙ
+              ХЛЕБЧИК
+            </h4>
+            <a class="banner__inner-link" href="#">
+              ПЕРЕЙТИ К ПОКУПКАМ
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="section filter sale">
+      <div class="container">
+        <h2 class="title">Акции</h2>
+        <ul class="filter__buttons">
+          <li class="filter__item">
+            <button class="filter__button sale__button" type="button" data-filter="all">
+              Все товары
+            </button>
+          </li>
+          <li class="filter__item">
+            <button class="filter__button sale__button" type="button" data-filter=".category-a">
+              Новинки
+            </button>
+          </li>
+          <li class="filter__item">
+            <button class="filter__button sale__button" type="button" data-filter=".category-b">
+              ХИТЫ
+            </button>
+          </li>
+        </ul>
+        <ul class="filter__product sale__product">
+          <li class="filter__product-item sale__product-item mix category-a" data-order="9">
+            <article class="filter__product-article sale__product-article filter__product-article--new" href="#">
+              <img class="filter__product-img sale__product-img" src="images/products/1.jpg" alt="Ананас" width="100" height="100">
+              <div class="filter__product-inner sale__product-inner">
+                <h6 class="filter__product-name">
+                  Ананас, 1кг
+                </h6>
+                <div class="filter__product-box sale__product-box sale__product-box--have">
+                  <div class="filter__product-prices sale__product-preces">
+                    <span class="filter__product-oldprice filter__product-oldprice--sale">1999 ₽ </span>
+                    <span class="filter__product-price sale__product-price">999 ₽ </span>
+                  </div>
+                  <span class="sale__product-raiting">4.5</span>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="filter__product-item sale__product-item mix category-a" data-order="10">
+            <article class="filter__product-article filter__product-article--new sale__product-article" href="#">
+              <img class="filter__product-img sale__product-img" src="images/sale-product/2.jpg" alt="Лимон" width="100" height="100">
+              <div class="filter__product-inner sale__product-inner">
+                <h6 class="filter__product-name">
+                  Кофе с коноплей органический Caffé Salomoni 250г
+                </h6>
+                <div class="filter__product-box sale__product-box sale__product-box--finish">
+                  <div class="filter__product-prices sale__product-preces">
+                    <span class="filter__product-oldprice filter__product-oldprice--sale">877 ₽</span>
+                    <span class="filter__product-price sale__product-price">777 ₽ </span>
+                  </div>
+                  <span class="sale__product-raiting">4.9</span>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="filter__product-item sale__product-item mix category-a" data-order="11">
+            <article class="filter__product-article sale__product-article filter__product-article--new" href="#">
+              <img class="filter__product-img sale__product-img" src="images/sale-product//3.jpg" alt="Питахайа красная" width="100" height="100">
+              <div class="filter__product-inner sale__product-inner">
+                <h6 class="filter__product-name">
+                  Клубника, 1 кг
+                </h6>
+                <div class="filter__product-box sale__product-box sale__product-box--absent">
+                  <div class="filter__product-prices sale__product-preces">
+                    <span class="filter__product-oldprice filter__product-oldprice--sale">600 ₽ </span>
+                    <span class="filter__product-price sale__product-price">440 ₽ </span>
+                  </div>
+                  <span class="sale__product-raiting">5.0</span>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="filter__product-item sale__product-item mix category-ф" data-order="12">
+            <article class="filter__product-article sale__product-article filter__product-article--new" href="#">
+              <img class="filter__product-img sale__product-img" src="images/sale-product//4.jpg" alt="Перец оранжевый" width="100" height="100">
+              <div class="filter__product-inner sale__product-inner">
+                <h6 class="filter__product-name">
+                  Манго, 1 шт
+                </h6>
+                <div class="filter__product-box sale__product-box sale__product-box--have">
+                  <div class="filter__product-prices sale__product-preces">
+                    <span class="filter__product-oldprice filter__product-oldprice--sale">960 ₽</span>
+                    <span class="filter__product-price sale__product-price">660 ₽ </span>
+                  </div>
+                  <span class="sale__product-raiting">5.0</span>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="filter__product-item sale__product-item mix category-a" data-order="13">
+            <article class="filter__product-article sale__product-article filter__product-article--new" href="#">
+              <img class="filter__product-img sale__product-img" src="images/sale-product//5.jpg" alt="Морковь" width="100" height="100">
+              <div class="filter__product-inner sale__product-inner">
+                <h6 class="filter__product-name">
+                  Лосось, 1 кг
+                </h6>
+                <div class="filter__product-box sale__product-box sale__product-box--have">
+                  <div class="filter__product-prices sale__product-preces">
+                    <span class="filter__product-oldprice filter__product-oldprice--sale">1199 ₽ </span>
+                    <span class="filter__product-price sale__product-price">999 ₽ </span>
+                  </div>
+                  <span class="sale__product-raiting">4.5</span>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="filter__product-item sale__product-item mix category-b" data-order="14">
+            <article class="filter__product-article sale__product-article filter__product-article--hit" href="#">
+              <img class="filter__product-img sale__product-img" src="images/sale-product//6.jpg" alt="Напиток" width="100" height="100">
+              <div class="filter__product-inner sale__product-inner">
+                <h6 class="filter__product-name">
+                  Сок Granini овощной 100%, 0.5л
+                </h6>
+                <div class="filter__product-box sale__product-box sale__product-box--finish">
+                  <div class="filter__product-prices sale__product-preces">
+                    <span class="filter__product-oldprice filter__product-oldprice--sale">230 ₽ </span>
+                    <span class="filter__product-price sale__product-price">180 ₽ </span>
+                  </div>
+                  <span class="sale__product-raiting">4.9</span>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="filter__product-item sale__product-item mix category-b" data-order="15">
+            <article class="filter__product-article sale__product-article filter__product-article--hit" href="#">
+              <img class="filter__product-img sale__product-img" src="images/sale-product//7.jpg" alt="Кофе" width="100" height="100">
+              <div class="filter__product-inner sale__product-inner">
+                <h6 class="filter__product-name">
+                  Фруктовая корзина, 1 шт
+                </h6>
+                <div class="filter__product-box sale__product-box sale__product-box--have">
+                  <div class="filter__product-prices sale__product-preces">
+                    <span class="filter__product-oldprice filter__product-oldprice--sale">5990 ₽</span>
+                    <span class="filter__product-price sale__product-price">3990 ₽ </span>
+                  </div>
+                  <span class="sale__product-raiting">4.8</span>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="filter__product-item sale__product-item mix category-b" data-order="16">
+            <article class="filter__product-article filter__product-article--hit sale__product-article" href="#">
+              <img class="filter__product-img sale__product-img" src="images/sale-product//8.jpg" alt="Кетчуп" width="100" height="100">
+              <div class="filter__product-inner sale__product-inner">
+                <h6 class="filter__product-name">
+                  Свинина мякоть, 1 кг
+                </h6>
+                <div class="filter__product-box sale__product-box sale__product-box--have">
+                  <div class="filter__product-prices sale__product-preces">
+                    <span class="filter__product-oldprice filter__product-oldprice--sale">599 ₽</span>
+                    <span class="filter__product-price sale__product-price">499 ₽ </span>
+                  </div>
+                  <span class="sale__product-raiting">4.6</span>
+                </div>
+              </div>
+            </article>
+          </li>
+        </ul>
+        <a href="" class="sale__product-btn btn">Показать еще</a>
       </div>
     </section>
   </main>
@@ -458,8 +661,8 @@
         <div class="footer__email">
           <p class="footer__email-text">Следите за нашими акциями</p>
           <form action="" class="footer__emai-form">
-            <input class="footer__email-input" type="email" placeholder="email@email.com">
-            <button class="btn footer__email-btn" type="button">Подписаться</button>
+            <input class="input footer__email-input" type="email" placeholder="email@email.com" required>
+            <button class="footer__email-btn" type="button">Подписаться</button>
           </form>
         </div>
         <div class="footer__links">
