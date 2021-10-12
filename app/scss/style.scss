@@ -988,4 +988,70 @@
 }
 
 
+.brands {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.news {
+  &__head {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__link {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+    color: #63A60E;
+    padding-bottom: 6px;
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item-link {
+    display: block;
+    max-width: 420px;
+    width: 100%;
+    position: relative;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+  }
+  &__time {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    display: flex;
+    flex-direction: column;
+  }
+  &__num {
+    font-family: $font-ruda;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 1;
+  }
+  &__img {
+    height: 240px;
+    object-fit: cover;
+  }
+  &__date {
+    position: absolute;
+    padding: 18px 16px 10px;
+    background-color: $white;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    top: 0;
+    left: 20px;
+  }
+  &__text {
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 600;
+    padding: 18px
+  }
+}
+
+
 @import 'media';
