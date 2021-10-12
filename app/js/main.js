@@ -5,15 +5,11 @@ $(function () {
     $('.header__search-menu').toggleClass('header__search-menu--active')
     $('.header__search-catalog').toggleClass('header__search-catalog--active')
   })
-
-  $(document).on('click', function (e) { // событие клика по веб-документу
-    var div = $(".header__search-menu--active"); // тут указываем ID элемента
-    if (!div.is(e.target) // если клик был не по нашему блоку
-      &&
-      div.has(e.target).length === 0) { // и не по его дочерним элементам
-      div.css('display: none'); // скрываем его
-    }
+  
+  $('main').on('click', function (event) {
+    $('.header__search-menu--active').removeClass('header__search-menu--active')
   });
+
 
   $('.cart__menu-close').on('click', function () {
     $('.cart__menu').toggleClass('cart__menu--active')
