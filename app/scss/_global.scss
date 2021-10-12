@@ -24,6 +24,18 @@ body {
   padding: 0 15px
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 
 *::before,
 *::after {
@@ -80,23 +92,6 @@ body {
 .slider-arrow img path {
   fill: red;
 }
-
-// .slick-arrow img path {
-//   border: 1px solid #c1c1c1;
-//   background-color: white;
-//   line-height: 0;
-//   border-radius: 6px;
-//   opacity: 0;
-//   transition: background-color 0.3s ease-in, box-shadow 0.3s ease-in;
-//   &:hover path {
-//     background-color: #E0EDCF;
-//     border-color:#63A60E;
-//   }
-//   &:focus path {
-//     box-shadow: 0 0 0 3px rgba(99, 166, 14, 0.5);
-//     outline: transparent;
-//   }
-// }
 
 .input {
   transition: box-shadow 0.3s ease-in;

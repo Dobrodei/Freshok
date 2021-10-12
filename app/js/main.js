@@ -26,12 +26,12 @@ $(function () {
   })
 
 
-  $('.slider').slick({
+  $('.discounts-slider__box').slick({
     adaptiveHeight: true,
     nextArrow: '<button type="button" class="slick-next"><img class="slider-arrow" src="images/icons/arrow-right.svg" alt=""></button>',
     prevArrow: '<button type="button" class="slick-prev"><img class="slider-arrow" src="images/icons/arrow-left.svg" alt=""></button>',
   })
 
-  var mixer = mixitup('.filter__product');
+  var mixer = mixitup('.product-card');
   var sale = mixitup('.sale__product')
 })
