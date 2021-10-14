@@ -1,13 +1,13 @@
 $(function () {
 
-  $('.header__search-catalog ').on('click', function (event) {
+  $('.header-catalog__btn').on('click', function (event) {
     event.preventDefault();
-    $('.header__search-menu').toggleClass('header__search-menu--active')
-    $('.header__search-catalog').toggleClass('header__search-catalog--active')
+    $('.header-catalog__menu').toggleClass('header-catalog__menu--active')
+    $('.header-catalog__btn').toggleClass('header-catalog__btn--active')
   })
   
   $('main').on('click', function (event) {
-    $('.header__search-menu--active').removeClass('header__search-menu--active')
+    $('.header-catalog__menu--active').removeClass('header-catalog__menu--active')
   });
 
 
