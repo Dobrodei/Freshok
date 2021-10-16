@@ -24,10 +24,29 @@ $(function () {
 
   $('.discounts-slider__box').slick({
     adaptiveHeight: true,
-    nextArrow: '<button type="button" class="slick-arrow slick-next"><img class="slider-arrow" src="images/icons/arrow-right.svg" alt=""></button>',
-    prevArrow: '<button type="button" class="slick-arrow slick-prev"><img class="slider-arrow" src="images/icons/arrow-left.svg" alt=""></button>',
+    nextArrow: '<button type="button" class="slick-arrow slick-arrow__right slick-next"><svg><use xlink:href="images/sprite.svg#arrow-right"></use></svg></button>',
+    prevArrow: '<button type="button" class="slick-arrow  slick-arrow__left slick-prev"><svg><use xlink:href="images/sprite.svg#arrow-left"></use></svg></button>',
   })
+  $('.brands__inner').slick({
+    arrows:false,
+    slidesToShow: 6,
+    slidesToScroll: 3,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 2000,
+  })
+  
+ var containerEl1 = $('[data-ref="container-1"]');
+ var containerEl2 = $('[data-ref="container-2"]');
 
-  var mixer = mixitup('.product-items__inner');
-  var sale = mixitup('.sale-card__inner')
+ var config = {
+   controls: {
+     scope: 'local'
+   }
+ };
+
+ var mixer1 = mixitup(containerEl1, config);
+ var mixer2 = mixitup(containerEl2, config);
+  
 })
+
