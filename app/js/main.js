@@ -21,6 +21,10 @@ $(function () {
     $('body').toggleClass('body--lock')
   })
 
+  $('.header__search').on('click', function () {
+    $('.header__search').toggleClass('.header__search--active')
+  })
+
 
   $('.discounts-slider__box').slick({
     adaptiveHeight: true,

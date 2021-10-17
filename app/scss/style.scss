@@ -1,11 +1,20 @@
 @import 'reset';
 @import 'fonts';
 @import 'vars';
+@import 'mixin';
 @import 'global';
 @import 'libs';
 
 .body--lock {
   overflow: hidden;
+}
+
+.logo {
+  display: inline-block;
+
+  img {
+    max-width: 200px;
+  }
 }
 
 .header {
@@ -26,6 +35,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
   }
 
   &__link {
@@ -38,17 +48,17 @@
       opacity: 0.7
     }
 
-    &--adress {
+    &--address {
       margin-right: 48px;
     }
 
-    &--adress,
+    &--address,
     &--number {
       padding-left: 44px;
       position: relative;
     }
 
-    &--adress::before,
+    &--address::before,
     &--number::before {
       content: "";
       position: absolute;
@@ -58,7 +68,7 @@
       left: -1px;
     }
 
-    &--adress::before {
+    &--address::before {
       background-image: url("../images/icons/del-address.svg");
       width: 32px;
     }
@@ -77,18 +87,22 @@
     margin-right: 24px;
   }
 
-  &__user {
+  &__users {
     display: flex;
     align-items: center;
+  }
+
+  &__user:not(:last-child) {
+    margin-left: 35px;
+  }
+
+  &__search {
+    display: none;
   }
 
   &__btn {
     position: relative;
     cursor: pointer;
-
-    &:not(:last-child) {
-      margin-left: 35px;
-    }
 
     &::after {
       content: "";
@@ -136,15 +150,17 @@
     left: -9px;
     background-color: $white;
     color: $red-900;
+    opacity: 0;
     border-radius: 50%;
     font-size: 10px;
     font-weight: 600;
 
-    .header__btn--active & {
-      opacity: 0;
+    &--active {
+      opacity: 1;
     }
   }
 }
+
 
 .header-catalog {
   margin-right: auto;
@@ -217,6 +233,7 @@
     background-color: $white;
     border-bottom-right-radius: 6px;
     border-bottom-left-radius: 6px;
+    visibility: hidden;
 
     &--active {
       position: absolute;
@@ -225,7 +242,9 @@
       left: 0;
       transform: translateY(0%);
       z-index: 1;
+      visibility: visible;
     }
+
   }
 
   &__item:not(:last-child) {
@@ -266,24 +285,42 @@
   }
 
   &__input {
-    padding: 16px 157px 16px 50px;
+    max-width: 420px;
     width: 100%;
-    border-radius: 6px;
+    padding: 16px 51px;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
     border-width: 0;
+    border: 1px solid transparent;
+    transition: box-shadow 0.3s ease-in,
+      border 0.3s ease-in;
 
     &::placeholder {
       color: $dark-400;
     }
+
+    &:focus {
+      outline: transparent;
+      border: 1px solid #63A60E;
+      box-shadow: 0 0 0 3px $green-200;
+    }
+
+    &:valid {
+      box-shadow: 0 0 0 3px $green-200;
+    }
   }
 
   &__btn {
-    padding: 16px 52px;
+    padding: 16px 53px;
+    font-size: 14px;
     font-weight: 600;
+    line-height: 1.4;
     background-color: $dark-400;
     color: $white;
     border-top-right-radius: 6px;
     border-bottom-right-radius: 6px;
     transition: box-shadow 0.3s ease-in, background-color 0.3s ease-in, color 0.3s ease-in;
+    text-transform: uppercase;
     position: absolute;
     right: 0;
 
@@ -292,7 +329,7 @@
     }
 
     &:focus {
-      box-shadow: 0 0 0 4px $green-200;
+      box-shadow: 0px 0px 0px 4px rgba(255, 255, 255, 0.5);
       border-top-right-radius: 6px;
       border-bottom-right-radius: 6px;
       outline: transparent;
@@ -301,6 +338,7 @@
     &:active {
       color: rgba($white, 0.5);
       background-color: $dark-400;
+      box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
   }
 }
@@ -390,6 +428,8 @@
   }
 
   &__inner {
+    max-width: 1290px;
+    margin: 0 auto;
     padding: 24px;
     background-color: rgba($white, 0.8);
     border-radius: 4px;
@@ -454,6 +494,7 @@
     &:active {
       background-color: $green-200;
       border-color: $green-600;
+      box-shadow: none;
 
       svg {
         fill: $green-600;
@@ -477,7 +518,7 @@
     padding-left: 75px;
     position: relative;
 
-    &-text p {
+    &__text p {
       color: $dark-500;
     }
 
@@ -494,7 +535,7 @@
     }
   }
 
-  &__item--scooter::before {
+  &__item--delivery::before {
     background-image: url("../images/icons/scooter.svg");
   }
 
@@ -502,11 +543,11 @@
     background-image: url("../images/icons/return.svg");
   }
 
-  &__item--time::before {
+  &__item--defective::before {
     background-image: url("../images/icons/time.svg");
   }
 
-  &__item-title {
+  &__title {
     font-size: 16px;
     font-weight: 600;
     margin-bottom: 7px;
@@ -522,7 +563,7 @@
     margin-right: 24px;
   }
 
-  &__button {
+  &__btn {
     font-weight: 700;
     font-size: 15px;
     color: $dark-500;
@@ -540,12 +581,20 @@
   }
 }
 
-.product-items__inner {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 30px;
-  margin-bottom: 45px;
+.product-content {
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+    margin-bottom: 45px;
+  }
+
+  &__btn {
+    display: block;
+    margin: 0 auto;
+  }
 }
+
 
 .product-card {
   display: flex;
@@ -566,7 +615,7 @@
 
   &--new::before,
   &--hit::after,
-  .product-card__badges {
+  .product-card__sale {
     font-size: 10px;
     font-weight: 700;
     padding: 3px 6px;
@@ -590,18 +639,22 @@
     background-color: $orange-900;
   }
 
-  &--new .product-card__badges,
-  &--hit .product-card__badges,
+  &--new .product-card__sale,
+  &--hit .product-card__sale,
   &.product-card--new.product-card--hit::after {
-    margin-top: 20px;
+    top: 35px;
   }
 
-  &__badges {
+  &__sale {
     display: none;
     background-color: $red-900;
 
     .product-card--sale & {
       display: block;
+    }
+
+    .product-card--new.product-card--hit & {
+      display: none;
     }
   }
 
@@ -656,7 +709,7 @@
     margin-top: auto;
   }
 
-  &__oldprice {
+  &__old {
     color: $silver-600;
     position: relative;
     display: none;
@@ -697,6 +750,12 @@
       opacity: 0.5;
     }
 
+    &:active {
+      box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+      background-color: $green-600;
+    }
+
+
     &::before {
       content: "";
       position: absolute;
@@ -709,14 +768,9 @@
       transform: translate(-50%, -50%);
     }
   }
-
-  &__btn {
-    display: block;
-    margin: 0 auto;
-  }
 }
 
-.banner-card {
+.banners-card {
   padding-top: 0;
 
   &__inner {
@@ -730,6 +784,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    display: block;
     padding: 79px 31px;
     border-radius: 6px;
     color: $dark-500;
@@ -737,11 +792,16 @@
     &:first-child {
       color: $white;
 
+      p{
+        text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
+      }
+
       a {
         border-color: $white;
       }
     }
   }
+
 
   &__title {
     font-size: 12px;
@@ -749,19 +809,22 @@
     margin-bottom: 18px;
     line-height: 1;
     letter-spacing: 0.1em;
-    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.25);
   }
 
-  &__subtitle {
+  &__text {
     font-family: $font-ruda;
     font-weight: 600;
     font-size: 30px;
-    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
     margin-bottom: 12px;
     max-width: 360px;
+
+    & p:not(:last-child) {
+      margin-bottom: 10px;
+    }
   }
 
-  &__link {
+  &__ref {
+    display: inline-block;
     font-weight: 700;
     padding-bottom: 6px;
     border-bottom: 2px solid $dark-500;
@@ -773,8 +836,13 @@
   }
 }
 
-.sale-items {
+.sale-content {
   background-color: #F5F5F5;
+
+  &__btn {
+    display: block;
+    margin: 0 auto;
+  }
 }
 
 .sale-card {
@@ -830,7 +898,7 @@
     }
   }
 
-  &__price {
+  &__now {
     font-size: 20px;
     font-weight: 600;
     line-height: 1;
@@ -860,10 +928,6 @@
     }
   }
 
-  &__btn {
-    display: block;
-    margin: 0 auto;
-  }
 }
 
 
@@ -1007,8 +1071,13 @@
     padding: 30px 0;
   }
 
-  &__phone,
   &__address {
+    line-height: 140%;
+    font-style: normal;
+  }
+
+  &__phone,
+  &__street {
     display: block;
     margin-bottom: 18px;
   }
@@ -1085,12 +1154,12 @@
 }
 
 .footer__email {
+  max-width: 306px;
+  width: 100%;
   margin-right: 145px;
   line-height: 1;
 
   &-form {
-    max-width: 306px;
-    width: 100%;
     position: relative;
   }
 
@@ -1100,7 +1169,9 @@
   }
 
   &-input {
-    padding: 9px 136px 12px 12px;
+    max-width: 180px;
+    width: 100%;
+    padding: 11px;
     border-width: 0;
   }
 
@@ -1110,7 +1181,7 @@
     text-transform: uppercase;
     background-color: $green-600;
     color: $white;
-    padding: 13px 16px;
+    padding: 13px 17px;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     position: absolute;
@@ -1137,7 +1208,3 @@
     margin-bottom: 18px;
   }
 }
-
-
-
-@import 'media';

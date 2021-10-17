@@ -101,20 +101,8 @@ body {
     &:active {
       box-shadow: inset 0px 10px 4px rgba(0, 0, 0, 0.1);
       color: rgba(99, 166, 14, 0.5);
+      background-color: $white;
     }
   }
 }
 
-
-.input {
-  transition: box-shadow 0.3s ease-in;
-}
-
-.input:focus {
-  outline: transparent;
-  box-shadow: 0 0 0 3px $green-200;
-}
-
-.input:valid {
-  box-shadow: 0 0 0 3px $green-200;
-}
