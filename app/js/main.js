@@ -7,6 +7,7 @@ $(function () {
   })
   
   $('main').on('click', function (event) {
+    $('.header-catalog__btn--active').removeClass('header-catalog__btn--active')
     $('.header-catalog__menu--active').removeClass('header-catalog__menu--active')
   });
 
