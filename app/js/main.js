@@ -7,6 +7,7 @@ $(function () {
   })
   
   $('main').on('click', function (event) {
+    $('.header-catalog__btn--active').removeClass('header-catalog__btn--active')
     $('.header-catalog__menu--active').removeClass('header-catalog__menu--active')
   });
 
@@ -19,6 +20,10 @@ $(function () {
   $('.header__user-cart').on('click', function () {
     $('.cart__menu').toggleClass('cart__menu--active');
     $('body').toggleClass('body--lock')
+  })
+
+  $('.header__search').on('click', function () {
+    $('.header__search').toggleClass('.header__search--active')
   })
 
 
