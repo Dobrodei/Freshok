@@ -1,14 +1,12 @@
 $(function () {
 
-  $('.header-catalog__btn').on('click', function (event) {
+  $('.header-catalog').on('click', function (event) {
     event.preventDefault();
-    $('.header-catalog__menu').toggleClass('header-catalog__menu--active')
-    $('.header-catalog__btn').toggleClass('header-catalog__btn--active')
+    $('.header-catalog').toggleClass('header-catalog--active')
   })
   
   $('main').on('click', function (event) {
-    $('.header-catalog__btn--active').removeClass('header-catalog__btn--active')
-    $('.header-catalog__menu--active').removeClass('header-catalog__menu--active')
+    $('.header-catalog--active').removeClass('header-catalog--active');
   });
 
 
@@ -23,14 +21,15 @@ $(function () {
   })
 
   $('.header__search').on('click', function () {
-    $('.header__search').toggleClass('.header__search--active')
+    $('.form').toggleClass('form--active')
   })
+
 
 
   $('.discounts-slider__box').slick({
     adaptiveHeight: true,
-    nextArrow: '<button type="button" class="slick-arrow slick-arrow__right slick-next"><svg><use xlink:href="images/sprite.svg#arrow-right"></use></svg></button>',
-    prevArrow: '<button type="button" class="slick-arrow  slick-arrow__left slick-prev"><svg><use xlink:href="images/sprite.svg#arrow-left"></use></svg></button>',
+    nextArrow: '<button type="button" class="slick-arrow slick-arrow--next"><svg><use xlink:href="images/sprite.svg#arrow-right"></use></svg></button>',
+    prevArrow: '<button type="button" class="slick-arrow  slick-arrow--prev"><svg><use xlink:href="images/sprite.svg#arrow-left"></use></svg></button>',
   })
   $('.brands__inner').slick({
     arrows:false,
