@@ -24,12 +24,34 @@ $(function () {
     $('.form').toggleClass('form--active')
   })
 
+  $('.header__burger').on('click', function () {
+    $('.header-menu').toggleClass('header-menu--active')
+  })
 
 
-  $('.discounts-slider__box').slick({
+
+  $('.discounts-slider__row').slick({
     adaptiveHeight: true,
     nextArrow: '<button type="button" class="slick-arrow slick-arrow--next"><svg><use xlink:href="images/sprite.svg#arrow-right"></use></svg></button>',
     prevArrow: '<button type="button" class="slick-arrow  slick-arrow--prev"><svg><use xlink:href="images/sprite.svg#arrow-left"></use></svg></button>',
+    responsive: [{
+        breakpoint: 1024,
+        settings: {
+          arrows: false,
+          dots: true,
+          slidesToShow: 1,
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 1
+        }
+      }
+    ]
   })
   $('.brands__inner').slick({
     arrows:false,

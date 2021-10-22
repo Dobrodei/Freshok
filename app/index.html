@@ -25,7 +25,7 @@
               <a class="header-menu-logo" href="#">
                 <img src="images/logo.svg" alt="Логотип">
               </a>
-              <button class="header-menu__btn">
+              <button class="header-menu__btn header__burger">
                 <img src="images/icons/close.svg" alt="" width="18" height="18">
               </button>
             </div>
@@ -86,7 +86,7 @@
                 </li>
                 <li class="header-menu__link">
                   <a class="header-menu__ref" href="#">
-                  Новости
+                    Новости
                   </a>
                 </li>
                 <li class="header-menu__link">
@@ -129,6 +129,12 @@
             <li class="header__item">
               <a class="header__link" href="#">Новости</a>
             </li>
+            <a class="header__link-mobile" href="#">
+              <img src="images/icons/del-address.svg" alt="доставка">
+            </a>
+            <a class="header__link-mobile" href="#">
+              <img src="images/icons/tel.svg" alt="телефон">
+            </a>
           </ul>
         </div>
       </div>
@@ -136,7 +142,7 @@
         <div class="container header__inner">
           <a class="logo" href="#">
             <picture>
-              <source srcset="images/icons/logo-short.svg" media="(max-width: 700px)">
+              <source srcset="images/icons/logo-short.svg" media="(max-width: 700px)" widt="36" height="40">
               <img class="logo__img" src="images/logo.svg" width="200" height="60" alt="Логотип">
             </picture>
           </a>
@@ -267,52 +273,59 @@
     <h1 class="sr-only">Магизин продуктов</h1>
     <section class="discounts-slider">
       <h2 class="sr-only">Акции</h2>
-      <ul class="discounts-slider__box">
-        <li class="discounts-slider__item" style="background-image: url('images/discounts-slider/1.jpg'); display: flex;">
-          <div class="discounts-slider__inner">
-            <h3 class="discounts-slider__title">
-              СВЕЖАЧОК ВАМ в ХАТУ <span class="discounts-slider__subtitle">Скидка -50%</span>
-            </h3>
-            <div class="discounts-slider__text">
-              <p>
-                Только с 7 по 13 июля скидка на сезонные фрукты и овощи до 50%. Торопитесь!
-              </p>
+      <ul class="discounts-slider__row">
+
+          <li class="discounts-slider__item">
+            <div class="discounts-slider__box" style="background-image: url('images/discounts-slider/1.jpg');">
+              <div class="discounts-slider__inner">
+                <h3 class="discounts-slider__title">
+                  СВЕЖАЧОК ВАМ в ХАТУ <span class="discounts-slider__subtitle">Скидка -50%</span>
+                </h3>
+                <div class="discounts-slider__text">
+                  <p>
+                    Только с 7 по 13 июля скидка на сезонные фрукты и овощи до 50%. Торопитесь!
+                  </p>
+                </div>
+                <button class="discounts-slider__btn btn--primary btn" type="button">
+                  Купить сейчас
+                </button>
             </div>
-            <button class="discounts-slider__btn btn--primary btn" type="button">
-              Купить сейчас
-            </button>
+          </li>
+        </div>
+        <li class="discounts-slider__item">
+          <div class="discounts-slider__box" style="background-image: url('images/discounts-slider/2.jpg');">
+            <div class="discounts-slider__inner">
+              <h3 class="discounts-slider__title">
+                Накрути себе томатов
+                <span class="discounts-slider__subtitle">
+                  Акция: 3 кг по цене 1
+                </span>
+              </h3>
+              <div class="discounts-slider__text">
+                <p>
+                  Только с 12 по 15 июля скидка на домашние помидорчики
+                </p>
+              </div>
+              <button class="discounts-slider__btn btn--primary btn" type="button">
+                Купить сейчас
+              </button>
+            </div>
           </div>
         </li>
-        <li class="discounts-slider__item" style="background-image: url('images/discounts-slider/2.jpg'); display: flex">
-          <div class="discounts-slider__inner">
-            <h3 class="discounts-slider__title">
-              Накрути себе томатов
-              <span class="discounts-slider__subtitle">
-                Акция: 3 кг по цене 1
-              </span>
-            </h3>
-            <div class="discounts-slider__text">
-              <p>
-                Только с 12 по 15 июля скидка на домашние помидорчики
-              </p>
+        <li class="discounts-slider__item">
+          <div class="discounts-slider__box" style="background-image: url('images/discounts-slider/3.jpg');">
+            <div class="discounts-slider__inner">
+              <h3 class="discounts-slider__title">
+                Пусть остальные
+                позеленеют от зависти
+                <span class="discounts-slider__subtitle">
+                  Распродажа зелени
+                </span>
+              </h3>
+              <button class="discounts-slider__btn btn--primary btn" type="button">
+                Купить сейчас
+              </button>
             </div>
-            <button class="discounts-slider__btn btn--primary btn" type="button">
-              Купить сейчас
-            </button>
-          </div>
-        </li>
-        <li class="discounts-slider__item" style="background-image: url('images/discounts-slider/3.jpg'); display: flex">
-          <div class="discounts-slider__inner">
-            <h3 class="discounts-slider__title">
-              Пусть остальные
-              позеленеют от зависти
-              <span class="discounts-slider__subtitle">
-                Распродажа зелени
-              </span>
-            </h3>
-            <button class="discounts-slider__btn btn--primary btn" type="button">
-              Купить сейчас
-            </button>
           </div>
         </li>
       </ul>
