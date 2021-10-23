@@ -51,6 +51,9 @@ body {
   color: $dark-900;
   text-align: center;
   margin-bottom: 30px;
+  @include small-tablet {
+    font-size: 24px;
+  }
 }
 
 .btn {
@@ -78,6 +81,9 @@ body {
   &--primary {
     background-color: $green-900;
     color: $white;
+    @include small-tablet {
+      font-size: 14px;
+    }
   }
 
   &--secondary {

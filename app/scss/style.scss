@@ -676,6 +676,9 @@
     background-position: center;
     padding: 0 15px;
     height: 600px;
+    @include mobile {
+      padding: 0;
+    }
   }
 
   &__inner {
@@ -685,6 +688,9 @@
     background-color: rgba($white, 0.8);
     border-radius: 4px;
     position: relative;
+    @include tablet {
+      padding: 15px;
+    }
   }
 
   &__title {
@@ -697,6 +703,15 @@
     color: $dark-500;
     margin-bottom: 12px;
     text-transform: uppercase;
+    @include tablet {
+      font-size: 50px;
+    }
+    @include small-tablet {
+      font-size: 35px;
+    }
+    @include mobile {
+      font-size: 20px;
+    }
   }
 
   &__subtitle {
@@ -707,6 +722,9 @@
     font-size: 16px;
     color: $dark-500;
     margin-bottom: 32px;
+    @include small-tablet {
+      margin-bottom: 24px;
+    }
   }
 
   .slick-arrow {
@@ -778,23 +796,33 @@
       background-color: $green-600;
     }
   }
-
 }
 
 .benefits {
   padding: 49px 0 29px;
   background-color: #F6F6F6;
+  @include tablet {
+    padding: 30px 0;
+  }
 
   &__items {
     display: flex;
     justify-content: center;
+    @include small-tablet {
+      flex-wrap: wrap;
+    }
+    @include mobile {
+      justify-content: start;
+    }
   }
 
   &__item {
     max-width: 264px;
-    width: 100%;
     padding-left: 75px;
     position: relative;
+    @include small-tablet {
+      max-width: 100%;
+    }
 
     &__text p {
       color: $dark-500;
@@ -802,6 +830,9 @@
 
     &:not(:last-child) {
       margin-right: 65px;
+      @include small-tablet {
+        margin-bottom: 30px;
+      }
     }
 
     &::before {
@@ -836,9 +867,17 @@
   display: flex;
   justify-content: center;
   margin-bottom: 48px;
+  @include mobile {
+    margin-bottom: 9px;
+    flex-wrap: wrap;
+  }
 
   &__item:not(:last-child) {
     margin-right: 24px;
+    @include mobile {
+      margin-right: 31px;
+      padding-bottom: 15px;
+    }
   }
 
   &__btn {
@@ -865,6 +904,15 @@
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 30px;
     margin-bottom: 45px;
+    @include extra-large {
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+    }
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 5px;
+      margin-bottom: 24px;
+    }
   }
 
   &__btn {
@@ -931,11 +979,14 @@
   &__img {
     height: 225px;
     object-fit: cover;
-    margin-bottom: 8px;
+    margin: 0 auto 8px;
 
     .product-card--stock & {
       height: 100px;
       object-fit: cover;
+    }
+    @include mobile {
+      height: 100%;
     }
   }
 
@@ -1152,6 +1203,16 @@
     grid-template-columns: 2fr repeat(2, 1fr);
     grid-gap: 30px;
     text-transform: uppercase;
+    @include extra-large {
+      grid-gap: 20px
+    }
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 15px
+    }
+    @include mobile {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   &__item {
@@ -1163,7 +1224,12 @@
 
     &:first-child {
       color: $white;
-
+      @include tablet {
+        grid-column: span 2;
+      }
+      @include mobile {
+        grid-column: span 1;
+      }
       p {
         text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
         border-color: $white;
@@ -1174,6 +1240,9 @@
   &__link {
     display: block;
     padding: 79px 31px;
+    @include small-tablet {
+      padding: 76px 16px 30px;
+    }
   }
 
   &__title {
@@ -1190,6 +1259,11 @@
     font-size: 30px;
     margin-bottom: 12px;
     max-width: 360px;
+    @include small-tablet {
+      max-width: 260px;
+      font-size: 24px;
+      margin-bottom: 77px;
+    }
 
     & p:not(:last-child) {
       margin-bottom: 10px;
