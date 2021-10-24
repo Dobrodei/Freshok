@@ -4,7 +4,7 @@ $(function () {
     event.preventDefault();
     $('.header-catalog').toggleClass('header-catalog--active')
   })
-  
+
   $('main').on('click', function (event) {
     $('.header-catalog--active').removeClass('header-catalog--active');
   });
@@ -35,35 +35,52 @@ $(function () {
     nextArrow: '<button type="button" class="slick-arrow slick-arrow--next"><svg><use xlink:href="images/sprite.svg#arrow-right"></use></svg></button>',
     prevArrow: '<button type="button" class="slick-arrow  slick-arrow--prev"><svg><use xlink:href="images/sprite.svg#arrow-left"></use></svg></button>',
     responsive: [{
-        breakpoint: 1024,
-        settings: {
-          arrows: false,
-          dots: true,
-          slidesToShow: 1,
-        }
-      },
-    ]
+      breakpoint: 1024,
+      settings: {
+        arrows: false,
+        dots: true,
+        slidesToShow: 1,
+      }
+    }, ]
   })
   $('.brands__inner').slick({
-    arrows:false,
+    arrows: false,
     slidesToShow: 6,
     slidesToScroll: 3,
     infinite: true,
     autoplay: true,
     autoplaySpeed: 2000,
+    responsive: [{
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 4,
+        }
+      },
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+        }
+      }
+    ]
   })
-  
- var containerEl1 = $('[data-ref="container-1"]');
- var containerEl2 = $('[data-ref="container-2"]');
 
- var config = {
-   controls: {
-     scope: 'local'
-   }
- };
+  var containerEl1 = $('[data-ref="container-1"]');
+  var containerEl2 = $('[data-ref="container-2"]');
 
- var mixer1 = mixitup(containerEl1, config);
- var mixer2 = mixitup(containerEl2, config);
-  
+  var config = {
+    controls: {
+      scope: 'local'
+    }
+  };
+
+  var mixer1 = mixitup(containerEl1, config);
+  var mixer2 = mixitup(containerEl2, config);
+
 })
-
