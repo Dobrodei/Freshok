@@ -1521,24 +1521,28 @@
   }
 
   &__nav {
-    // margin-right: auto;
     max-width: 466px;
     width: 100%;
-    // display: flex;
-    // justify-content: space-between;
+  }
+  
+  &__list {
     column-count: 3;
-    column-gap: 75px;
-    // display: contents;
+    column-gap: 150px;
+    white-space: nowrap;
   }
 
   &__link {
+    display: inline-block;
     transition: color 0.3s ease-in;
+    &:not(:last-child){
+      margin-bottom: 18px;
+    }
 
     &:hover {
       color: $silver-600;
     }
   }
-
+  
   &__item:not(:last-child) {
     margin-bottom: 18px;
   }
