@@ -1518,17 +1518,22 @@
     display: flex;
     justify-content: space-between;
     padding: 30px 0;
+    @include tablet {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
   }
 
   &__nav {
-    max-width: 466px;
-    width: 100%;
+    // max-width: 466px;
+    // width: 100%;
   }
   
   &__list {
+    padding-left: 80px;
     column-count: 3;
-    column-gap: 150px;
-    white-space: nowrap;
+    column-gap: 75px;
+    // white-space: nowrap;
   }
 
   &__link {
@@ -1545,6 +1550,10 @@
   
   &__item:not(:last-child) {
     margin-bottom: 18px;
+  }
+
+  &__contacts {
+    // margin-left: 30px;
   }
 
   &__address {
