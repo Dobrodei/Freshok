@@ -14,6 +14,7 @@
 
   img {
     max-width: 200px;
+    object-fit: cover;
   }
 }
 
@@ -269,13 +270,6 @@
     margin-left: 35px;
   }
 
-  &__search {
-    display: none;
-
-    @include tablet {
-      display: block;
-    }
-  }
 
   &__btn {
     position: relative;
@@ -315,6 +309,20 @@
       width: 32px;
       height: 31px;
     }
+
+    &--search {
+      background-image: url("../images/icons/search-btn.svg");
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__btn--search {
+    display: none;
+
+    @include tablet {
+      display: block;
+    }
   }
 
   &__num {
@@ -332,7 +340,7 @@
     font-size: 10px;
     font-weight: 600;
 
-    &--active {
+    &--visible {
       opacity: 1;
     }
   }
@@ -531,6 +539,10 @@
 
     &:hover {
       background-color: rgba(49, 53, 43, 0.85);
+
+      .form--footer & {
+        background-color: #4d800c;
+      }
     }
 
     &:focus {
@@ -548,6 +560,12 @@
       color: rgba($white, 0.5);
       background-color: $dark-400;
       box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+
+      .form--footer & {
+        color: rgba($white, 0.5);
+        background-color: $green-600;
+        box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+      }
     }
 
     .form--footer & {
@@ -709,6 +727,7 @@
     font-size: 60px;
     color: $dark-500;
     margin-bottom: 12px;
+    letter-spacing: 0;
     text-transform: uppercase;
 
     @include tablet {
@@ -780,6 +799,7 @@
 
     &:focus {
       box-shadow: 0 0 0 3px rgba(99, 166, 14, 0.5);
+      outline: none;
     }
   }
 
@@ -835,6 +855,7 @@
     max-width: 264px;
     padding-left: 75px;
     position: relative;
+    background-repeat: no-repeat;
 
     @include small-tablet {
       max-width: 100%;
@@ -858,6 +879,10 @@
       width: 50px;
       height: 50px;
       left: 0;
+      object-fit: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
     }
   }
 
@@ -869,7 +894,7 @@
     background-image: url("../images/icons/return.svg");
   }
 
-  &__item--defective::before {
+  &__item--support::before {
     background-image: url("../images/icons/time.svg");
   }
 
@@ -1031,34 +1056,6 @@
     overflow: hidden;
   }
 
-  &__text {
-    display: none;
-
-    .product-card--finish &,
-    .product-card--absent &,
-    .product-card--have & {
-      display: block;
-      font-size: 10px;
-      font-weight: 600;
-      text-transform: uppercase;
-      line-height: 1;
-      margin-bottom: 5px;
-
-    }
-
-    .product-card--finish & {
-      color: $red-900;
-    }
-
-    .product-card--absent & {
-      color: $silver-600;
-    }
-
-    .product-card--have & {
-      color: $green-600;
-    }
-  }
-
   &__inner {
     height: 101px;
     display: flex;
@@ -1076,15 +1073,51 @@
     }
   }
 
+
+
   &__box {
     display: flex;
     justify-content: space-between;
     color: $dark-500;
+    position: relative;
 
     .product-card--stock & {
       align-items: center;
     }
+
+    .product-card--finish &::before,
+    .product-card--absent &::before,
+    .product-card--have &::before {
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      line-height: 1;
+      position: absolute;
+      top: -15px;
+    }
+
+    .product-card--finish &::before {
+      content: "Заканчивается";
+      color: $red-900;
+    }
+
+    .product-card--absent &::before {
+      content: "Нет в наличии";
+      color: $silver-600;
+    }
+
+    .product-card--have &::before {
+      content: "В наличии";
+      color: $green-600;
+    }
+
+    // .product-card--finish,
+    // .product-card--absent,
+    // .product-card--have .product-card--stock &::before {
+    //   display: none;
+    // }
   }
+
 
   &__prices {
     margin-top: auto;
@@ -1129,6 +1162,8 @@
 
       & sub {
         font-size: 14px;
+        vertical-align: baseline;
+        margin-left: -4px;
       }
     }
   }
@@ -1518,6 +1553,7 @@
     display: flex;
     justify-content: space-between;
     padding: 30px 0;
+
     @include tablet {
       flex-direction: column-reverse;
       align-items: center;
@@ -1528,18 +1564,32 @@
     // max-width: 466px;
     // width: 100%;
   }
-  
+
   &__list {
     padding-left: 80px;
     column-count: 3;
     column-gap: 75px;
+
     // white-space: nowrap;
+    @include tablet {
+      padding: 24px 0;
+      margin: 24px 0;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: yellow;
+      }
+    }
   }
 
   &__link {
     display: inline-block;
     transition: color 0.3s ease-in;
-    &:not(:last-child){
+
+    &:not(:last-child) {
       margin-bottom: 18px;
     }
 
@@ -1547,7 +1597,7 @@
       color: $silver-600;
     }
   }
-  
+
   &__item:not(:last-child) {
     margin-bottom: 18px;
   }

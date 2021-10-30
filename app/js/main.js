@@ -15,12 +15,12 @@ $(function () {
     $('body').removeClass('body--lock')
   })
 
-  $('.header__user-cart').on('click', function () {
+  $('.header__btn--cart').on('click', function () {
     $('.cart__menu').toggleClass('cart__menu--active');
     $('body').toggleClass('body--lock')
   })
 
-  $('.header__search').on('click', function () {
+  $('.header__btn--search').on('click', function () {
     $('.form').toggleClass('form--active')
   })
 
