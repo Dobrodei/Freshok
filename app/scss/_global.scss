@@ -41,6 +41,12 @@ body {
 
 .section {
   padding: 72px 0;
+  @include tablet {
+    padding: 62px 0;
+  }
+  @include mobile {
+    padding: 48px 0;
+  }
 }
 
 .title {
