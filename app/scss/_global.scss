@@ -59,6 +59,7 @@ body {
   margin-bottom: 30px;
   @include small-tablet {
     font-size: 24px;
+    margin-bottom: 24px;
   }
 }
 
@@ -87,9 +88,6 @@ body {
   &--primary {
     background-color: $green-900;
     color: $white;
-    @include small-tablet {
-      font-size: 14px;
-    }
   }
 
   &--secondary {
