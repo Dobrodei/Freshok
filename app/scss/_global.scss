@@ -49,6 +49,36 @@ body {
   }
 }
 
+.breadcrumbs {
+  background-color: #f6f6f6;
+  padding: 23px 0;
+  &__list {
+    display: flex;
+  }
+  &__item {
+    padding-right: 16px;
+    position: relative;
+    &::after {
+      content: "";
+      width: 6px;
+      height: 10px;
+      background-image: url("../images/icons/breadcrumbs-arrow.svg");
+      position: absolute;
+      right: 5px;
+      top: 5px;
+    }
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+  }
+  &__link {
+    color: $dark-500;
+    line-height: 1.2;
+  }
+}
+
 .title {
   font-family: $font-ruda;
   font-weight: 600;
