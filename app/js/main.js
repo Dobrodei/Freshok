@@ -1,6 +1,23 @@
 $(function () {
+  $('.catalog__btn').on('click', function () {
+    $('.catalog__btn').removeClass('catalog__btn--active');
+    $(this).addClass('catalog__btn--active');
+  })
+
+  $('.catalog__btn--line').on('click', function () {
+    $('.product-card').addClass('product-card--stock');
+    $('.product-box__inner').addClass('product-box__inner--line')
+  })
+
+  $('.catalog__btn--grid').on('click', function () {
+    $('.product-card').removeClass('product-card--stock');
+    $('.product-card').addClass('product-card--catalog');
+    $('.product-box__grid').addClass('product-box__inner--grid')
+    $('.product-box__inner').removeClass('product-box__inner--line')
+  })
+
   $('.catalog__select').styler({
-    
+
   })
   $(".aside-catalog__range").ionRangeSlider({
     type: "double",
