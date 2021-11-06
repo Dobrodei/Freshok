@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8">
@@ -435,9 +435,9 @@
                   <form class="aside-catalog__form" action="#">
                     <label class="aside-catalog__label">
                       <div class="aside-catalog__price">от <span class="aside-catalog__to"></span> ₽</div>
-                      <div class="aside-catalog__price">до  <span class="aside-catalog__from"></span> ₽</div>
+                      <div class="aside-catalog__price">до <span class="aside-catalog__from"></span> ₽</div>
                     </label>
-                    <input type="text" class="aside-catalog__range" name="my_range" value="" data-min="100" data-max="1000" data-from="100" data-to="1000"/>
+                    <input type="text" class="aside-catalog__range" name="my_range" value="" data-min="100" data-max="1000" data-from="100" data-to="1000" />
                   </form>
                 </div>
               </li>
@@ -461,18 +461,104 @@
                   <option value="">по 36</option>
                 </select>
               </form>
-              <button class="catalog__btn">
+              <button class="catalog__btn catalog__btn--active catalog__btn--grid">
+                <span class="sr-only">Плиточная раскладка</span>
                 <svg class="">
                   <use xlink:href="images/sprite.svg#row"></use>
                 </svg>
               </button>
-              <button class="catalog__btn">
+              <button class="catalog__btn catalog__btn--line">
+                <span class="sr-only">Линейная раскладка</span>
                 <svg class="">
                   <use xlink:href="images/sprite.svg#grid"></use>
                 </svg>
               </button>
             </div>
+            <ul class="product-box__inner">
+              <li class="mix category-a">
+                <article class="product-card product-card--catalog product-card--new product-card--sale product-card--finish">
+                  <span class="product-card__sale">-50%</span>
+                  <button class="product-card__like" type="button">
+                    <span class="sr-only">Добавить в избранные</span>
+                    <svg class="">
+                      <use xlink:href="images/sprite.svg#heart"></use>
+                    </svg>
+                  </button>
+                  <img class="product-card__img" src="images/products/1.jpg" width="300" height="225" alt="Ананас">
+                  <div class="product-card__inner">
+                    <h3 class="product-card__name">
+                      Ананас, 1кг
+                    </h3>
+                    <div class="product-card__box">
+                      <div class="product-card__prices">
+                        <span class="product-card__old">1999 ₽</span>
+                        <span class="product-card__now">999 ₽ </span>
+                      </div>
+                      <button class="product-card__cart" type="button">
+                        <span class="sr-only">Добавить в корзину</span>
+                      </button>
+                    </div>
+                    <span class="product-card__raiting">4.5</span>
+                  </div>
+                </article>
+              </li>
+              <li class="mix category-a">
+                <article class="product-card product-card--catalog product-card--finish">
+                  <span class="product-card__sale">-50%</span>
+                  <button class="product-card__like" type="button">
+                    <span class="sr-only">Добавить в избранные</span>
+                    <svg class="">
+                      <use xlink:href="images/sprite.svg#heart"></use>
+                    </svg>
+                  </button>
+                  <img class="product-card__img" src="images/products/2.jpg" width="300" height="225" alt="Лимон">
+                  <div class="product-card__inner">
+                    <h3 class="product-card__name">
+                      Лимон, 1кг
+                    </h3>
+                    <div class="product-card__box">
+                      <div class="product-card__prices">
+                        <span class="product-card__old">1999 ₽</span>
+                        <span class="product-card__now">999 ₽ </span>
+                      </div>
+                      <button class="product-card__cart" type="button">
+                        <span class="sr-only">Добавить в коризину</span>
+                      </button>
+                    </div>
+                    <span class="product-card__raiting">4.5</span>
+                  </div>
+                </article>
+              </li>
+              <li class="mix category-a">
+                <article class="product-card product-card--catalog product-card--hit product-card--finish">
+                  <span class="product-card__sale">-50%</span>
+                  <button class="product-card__like" type="button">
+                    <span class="sr-only">Добавить в избранные</span>
+                    <svg class="">
+                      <use xlink:href="images/sprite.svg#heart"></use>
+                    </svg>
+                  </button>
+                  <img class="product-card__img" src="images/products/3.jpg" width="300" height="225" alt="Питахайа красная">
+                  <div class="product-card__inner">
+                    <h3 class="product-card__name">
+                      Питахайя красная с белой мякотью, 1шт
+                    </h3>
+                    <div class="product-card__box">
+                      <div class="product-card__prices">
+                        <span class="product-card__old">1999 ₽</span>
+                        <span class="product-card__now">1019 ₽ </span>
+                      </div>
+                      <button class="product-card__cart" type="button">
+                        <span class="sr-only">Добавить в коризину</span>
+                      </button>
+                    </div>
+                    <span class="product-card__raiting">4.5</span>
+                  </div>
+                </article>
+              </li>
+            </ul>
           </div>
+
         </div>
       </div>
 
