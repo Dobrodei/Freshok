@@ -1164,6 +1164,13 @@
         margin-top: auto;
       }
     }
+    .product-card--catalog & {
+      flex-direction: column;
+      margin-right: 12px;
+      .product-card__old {
+        font-size: 14px;
+      }
+    }
   }
 
   &__old {
@@ -1202,6 +1209,11 @@
         vertical-align: baseline;
         margin-left: -4px;
       }
+    }
+    .product-card--catalog & {
+      font-size: 14px;
+      font-weight: 400;
+      margin-right: 0;
     }
   }
 
@@ -1897,6 +1909,10 @@
 
   &__content {
     padding: 18px;
+    &--scrollbar {
+      height: 298px;
+      overflow: auto;
+    }
   }
 
   &__label {
@@ -1965,6 +1981,16 @@
     border-radius: 3px;
     color: $dark-500;
   }
+}
+
+.simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
+  height: 126px;
+  top: 2px;
+  bottom: 2px;
+  width: 4px;
+  right: 0;
+  left: 6px;
+  background-color: #c4c4c4;
 }
 
 .irs--flat {
