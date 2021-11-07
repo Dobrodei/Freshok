@@ -1,4 +1,14 @@
 $(function () {
+// catalog__filter
+  $('.catalog__filter').on('click', function (divclose) {
+    $('.aside-catalog').toggleClass('aside-catalog--active');
+
+    // if ($(divclose.target).closest('.aside-catalog--active').length == 0)
+    // {
+    //   $('.aside-catalog--active').hide();
+    // }
+    $('body').toggleClass('body--lock')
+  })
   $('.catalog__btn').on('click', function () {
     $('.catalog__btn').removeClass('catalog__btn--active');
     $(this).addClass('catalog__btn--active');
