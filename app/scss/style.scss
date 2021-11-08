@@ -1078,6 +1078,9 @@
 
     .product-card--catalog & {
       margin-top: 26px;
+      @include small-tablet {
+        margin-bottom: 28px;
+      }
     }
 
     .product-card--stock.product-card--catalog & {
@@ -1666,6 +1669,12 @@
 
 .catalog {
   padding: 48px 0 73px;
+  @include tablet {
+    padding: 36px 0 50px;
+  }
+  @include small-tablet {
+    padding: 30px 0 36px;
+  }
 
   &__title {
     font-family: $font-ruda;
@@ -1675,6 +1684,13 @@
     color: $dark-900;
     margin-bottom: 48px;
     text-transform: uppercase;
+    @include tablet {
+      font-size: 36px;
+    }
+    @include small-tablet {
+      font-size: 30px;
+      margin-bottom: 30px;
+    }
   }
 
   &__inner {
@@ -1694,6 +1710,10 @@
     display: flex;
     justify-content: end;
     margin-bottom: 48px;
+    @include small-tablet {
+      justify-content: flex-start;
+      margin-bottom: 30px;
+    }
   }
 
   &__filter {
@@ -1703,6 +1723,13 @@
     display: none;
     justify-content: center;
     align-items: center;
+    margin-right: 10px;
+    border-radius: 3px;
+    &--close {
+      background-color: transparent;
+      margin-left: auto;
+      margin-bottom: 30px;
+    }
     @include small-tablet {
       display: flex;
     }
@@ -1736,6 +1763,9 @@
         fill: $green-600;
       }
     }
+    @include  small-tablet {
+      display: none;
+    }
   }
 
   .product-box__inner {
@@ -1747,6 +1777,9 @@
       grid-gap: 15px;
       grid-auto-rows: auto;
     }
+    @include small-tablet {
+      grid-gap: 5px
+    }
 
     &--line {
       grid-template-columns: repeat(2, 1fr);
@@ -1755,17 +1788,26 @@
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 15px;
       }
+      @include small-tablet {
+        grid-gap: 5px
+      }
     }
   }
 
   &__list {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__pagination {
     display: flex;
+    @include tablet {
+      margin-top: 24px;
+    }
   }
 
   &__items {
@@ -1777,6 +1819,12 @@
   &__item {
     &:not(:last-child) {
       margin-right: 6px;
+    }
+    @include mobile {
+      &:nth-child(2),
+      &:nth-child(4) {
+        display: none;
+      }
     }
   }
 
@@ -1833,6 +1881,10 @@
   &:focus {
     box-shadow: 0 0 0 3px #E0EDCF;
   }
+  @include small-tablet {
+    font-size: 12px;
+    padding: 15px 24px 15px 6px;
+  }
 }
 
 .jq-selectbox__trigger {
@@ -1849,9 +1901,13 @@
   transform: translateY(-50%);
   right: 15px;
   border: none;
+  @include small-tablet {
+    right: 9px;
+  }
 }
 
 .jq-selectbox__dropdown {
+  width: 100%;
   margin: 0;
   border: 1px solid $silver-600;
   border-radius: 0 0 6px 6px;
@@ -1891,12 +1947,14 @@
   @include small-tablet {
     position: fixed;
     transform: translateX(-300%);
-    transition: transform 0.3s ease-in;
+    opacity: 0;
+    transition: transform 0.3s ease-in, opacity 0.3s ease-in;
   }
   &--active {
     transform: translateX(-5%);
+    opacity: 1;
     z-index: 15;
-    padding-top: 76px;
+    padding-top: 29px;
     padding-right: 21px;
     height: 100vh;
     overflow: auto;
@@ -1980,7 +2038,7 @@
     cursor: pointer;
 
     &:not(:last-child) {
-      margin-bottom: 14px;
+      margin-bottom: 12px;
     }
 
     &:hover {
@@ -1994,6 +2052,8 @@
     font-size: 18px;
     color: $dark-500;
     padding-left: 36px;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   &__input {
@@ -2033,9 +2093,11 @@
 
   &__to,
   &__from {
+    min-width: 80px;
     display: inline-block;
+    padding: 10px 0;
     font-size: inherit;
-    padding: 10px 24px;
+    text-align: center;
     background-color: #f6f6f6;
     border: 1px solid $silver-600;
     border-radius: 3px;
