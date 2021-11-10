@@ -285,7 +285,11 @@
       <div class="container">
         <h1 class="catalog__title">Каталог товаров</h1>
         <div class="catalog__inner">
-          <aside class="catalog__aside aside-catalog">
+          <aside class="catalog__aside aside-catalog" id="aside-catalog">
+            <button class="catalog__filter catalog__filter--close">
+              <span class="sr-only">Кнопна закрыть фильтр</span>
+              <img src="images/icons/close.svg" alt="Кнопна закрыть фильтр">
+            </button>
             <ul class="aside-catalog__list">
               <li class="aside-catalog__item">
                 <div class="aside-catalog__header">
@@ -293,95 +297,96 @@
                 </div>
                 <div class="aside-catalog__content aside-catalog__content--scrollbar" data-simplebar>
                   <form class="aside-catalog__form" action="#">
-                    <label class="aside-catalog__label" for="">
+                    <label class="aside-catalog__label">
                       <div class="aside-catalog__box">
                         <input class="aside-catalog__input" type="checkbox">
                       </div>
                       <span class="aside-catalog__text">Овощи и фрукты</span>
                     </label>
-                    <label class="aside-catalog__label" for="">
+                    <label class="aside-catalog__label">
                       <div class="aside-catalog__box">
                         <input class="aside-catalog__input" type="checkbox">
                       </div>
                       <span class="aside-catalog__text">Бакалея</span>
                     </label>
-                    <label class="aside-catalog__label" for="">
+                    <label class="aside-catalog__label">
                       <div class="aside-catalog__box">
                         <input class="aside-catalog__input" type="checkbox">
                       </div>
                       <span class="aside-catalog__text">Молочные продукты</span>
                     </label>
-                    <label class="aside-catalog__label" for="">
+                    <label class="aside-catalog__label">
                       <div class="aside-catalog__box">
                         <input class="aside-catalog__input" type="checkbox">
                       </div>
                       <span class="aside-catalog__text">Хлеб</span>
                     </label>
-                    <label class="aside-catalog__label" for="">
+                    <label class="aside-catalog__label">
                       <div class="aside-catalog__box">
                         <input class="aside-catalog__input" type="checkbox">
                       </div>
                       <span class="aside-catalog__text">Мясо</span>
                     </label>
-                    <label class="aside-catalog__label" for="">
+                    <label class="aside-catalog__label">
                       <div class="aside-catalog__box">
                         <input class="aside-catalog__input" type="checkbox">
                       </div>
                       <span class="aside-catalog__text">Колбаса</span>
                     </label>
-                    <label class="aside-catalog__label" for="">
+                    <label class="aside-catalog__label">
                       <div class="aside-catalog__box">
                         <input class="aside-catalog__input" type="checkbox">
                       </div>
                       <span class="aside-catalog__text">Рыба</span>
                     </label>
-                    <label class="aside-catalog__label" for="">
+                    <label class="aside-catalog__label">
                       <div class="aside-catalog__box">
                         <input class="aside-catalog__input" type="checkbox">
                       </div>
                       <span class="aside-catalog__text">Алкоголь</span>
                     </label>
-                    <label class="aside-catalog__label" for="">
+                    <label class="aside-catalog__label">
                       <div class="aside-catalog__box">
                         <input class="aside-catalog__input" type="checkbox">
                       </div>
                       <span class="aside-catalog__text">Мясо</span>
                     </label>
-                    <label class="aside-catalog__label" for="">
+                    <label class="aside-catalog__label">
                       <div class="aside-catalog__box">
                         <input class="aside-catalog__input" type="checkbox">
                       </div>
                       <span class="aside-catalog__text">Колбаса</span>
                     </label>
-                    <label class="aside-catalog__label" for="">
+                    <label class="aside-catalog__label">
                       <div class="aside-catalog__box">
                         <input class="aside-catalog__input" type="checkbox">
                       </div>
                       <span class="aside-catalog__text">Рыба</span>
-                    </label><label class="aside-catalog__label" for="">
+                    </label><label class="aside-catalog__label">
                       <div class="aside-catalog__box">
                         <input class="aside-catalog__input" type="checkbox">
                       </div>
                       <span class="aside-catalog__text">Мясо</span>
                     </label>
-                    <label class="aside-catalog__label" for="">
+                    <label class="aside-catalog__label">
                       <div class="aside-catalog__box">
                         <input class="aside-catalog__input" type="checkbox">
                       </div>
                       <span class="aside-catalog__text">Колбаса</span>
                     </label>
-                    <label class="aside-catalog__label" for="">
+                    <label class="aside-catalog__label">
                       <div class="aside-catalog__box">
                         <input class="aside-catalog__input" type="checkbox">
                       </div>
                       <span class="aside-catalog__text">Рыба</span>
-                    </label><label class="aside-catalog__label" for="">
+                    </label>
+                    <label class="aside-catalog__label">
                       <div class="aside-catalog__box">
                         <input class="aside-catalog__input" type="checkbox">
                       </div>
                       <span class="aside-catalog__text">Мясо</span>
                     </label>
-                    <label class="aside-catalog__label" for="">
+                    <label class="aside-catalog__label">
                       <div class="aside-catalog__box">
                         <input class="aside-catalog__input" type="checkbox">
                       </div>
@@ -482,7 +487,7 @@
                       <div class="aside-catalog__price">от <span class="aside-catalog__to"></span> ₽</div>
                       <div class="aside-catalog__price">до <span class="aside-catalog__from"></span> ₽</div>
                     </label>
-                    <input type="text" class="aside-catalog__range" name="my_range" value="" data-min="100" data-max="1000" data-from="100" data-to="1000" />
+                    <input type="text" class="aside-catalog__range" name="my_range" value="" data-min="50" data-max="1150" data-from="100" data-to="1000" />
                   </form>
                 </div>
               </li>
@@ -490,6 +495,10 @@
           </aside>
           <div class="catalog__box">
             <div class="catalog__filters">
+              <button class="catalog__filter">
+                <span class="sr-only">Кнопна открытия фильтра</span>
+                <img src="images/icons/filter-btn.svg" alt="Кнопна открытия фильтра">
+              </button>
               <form class="catalog__form" action="#">
                 <select class="catalog__select" name="" id="">
                   <option value="">По названию</option>
@@ -624,6 +633,7 @@
                         <span class="sr-only">Добавить в корзину</span>
                       </button>
                     </div>
+                    <span class="product-card__raiting">4.5</span>
                   </div>
                 </article>
               </li>
@@ -650,6 +660,7 @@
                         <span class="sr-only">Добавить в корзину</span>
                       </button>
                     </div>
+                    <span class="product-card__raiting">4.5</span>
                   </div>
                 </article>
               </li>
@@ -676,6 +687,7 @@
                         <span class="sr-only">Добавить в корзину</span>
                       </button>
                     </div>
+                    <span class="product-card__raiting">4.5</span>
                   </div>
                 </article>
               </li>
@@ -702,6 +714,7 @@
                         <span class="sr-only">Добавить в корзину</span>
                       </button>
                     </div>
+                    <span class="product-card__raiting">4.5</span>
                   </div>
                 </article>
               </li>
@@ -728,6 +741,7 @@
                         <span class="sr-only">Добавить в коризину</span>
                       </button>
                     </div>
+                    <span class="product-card__raiting">4.5</span>
                   </div>
                 </article>
               </li>
@@ -754,6 +768,7 @@
                         <span class="sr-only">Добавить в корзину</span>
                       </button>
                     </div>
+                    <span class="product-card__raiting">4.5</span>
                   </div>
                 </article>
               </li>
@@ -780,6 +795,7 @@
                         <span class="sr-only">Добавить в корзину</span>
                       </button>
                     </div>
+                    <span class="product-card__raiting">4.5</span>
                   </div>
                 </article>
               </li>
@@ -806,6 +822,7 @@
                         <span class="sr-only">Добавить в корзину</span>
                       </button>
                     </div>
+                    <span class="product-card__raiting">4.5</span>
                   </div>
                 </article>
               </li>
@@ -832,6 +849,7 @@
                         <span class="sr-only">Добавить в корзину</span>
                       </button>
                     </div>
+                    <span class="product-card__raiting">4.5</span>
                   </div>
                 </article>
               </li>
