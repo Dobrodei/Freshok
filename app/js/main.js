@@ -1,6 +1,14 @@
 $(function () {
-  // catalog__filter
-  $('.product-main__star').rateYo({
+  $('.product-main__tab').on('click', function(e) {
+    e.preventDefault();
+    $('.product-main__tab').removeClass('product-main__tab--active')
+    $(this).addClass('product-main__tab--active');
+
+    $('.product-main__item').removeClass('product-main__item--active')
+    $($(this).attr('href')).addClass('product-main__item--active')
+  })
+
+  $('.raiting').rateYo({
     starWidth: "16px",
     ratedFill: "#FFB800",
     normalFill: "#C1C1C1",
@@ -29,7 +37,7 @@ $(function () {
     $('.product-box__inner').removeClass('product-box__inner--line')
   })
 
-  $('.catalog__select, .product-main__input').styler({
+  $('.catalog__select, .product-main__input, .reviews-box__checkbox').styler({
 
   })
   $(".aside-catalog__range").ionRangeSlider({
