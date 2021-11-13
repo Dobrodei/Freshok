@@ -93,7 +93,7 @@ $(function () {
     }
   })
 
-  $('.discounts-slider__row').slick({
+  $('.discounts-slider__row, .recent-box__inner').slick({
     adaptiveHeight: true,
     nextArrow: '<button type="button" class="slick-arrow slick-arrow--next"><svg><use xlink:href="images/sprite.svg#arrow-right"></use></svg></button>',
     prevArrow: '<button type="button" class="slick-arrow  slick-arrow--prev"><svg><use xlink:href="images/sprite.svg#arrow-left"></use></svg></button>',
@@ -132,6 +132,13 @@ $(function () {
         }
       }
     ]
+  })
+
+  $('.recent-box__inner').slick({
+    // slidesToShow: 1,
+    slidesToScroll: 1,
+    // nextArrow: '<button type="button" class="slick-arrow slick-arrow--next"><svg><use xlink:href="images/sprite.svg#arrow-right"></use></svg></button>',
+    //   prevArrow: '<button type="button" class="slick-arrow  slick-arrow--prev"><svg><use xlink:href="images/sprite.svg#arrow-left"></use></svg></button>',
   })
 
   var containerEl1 = $('[data-ref="container-1"]');
