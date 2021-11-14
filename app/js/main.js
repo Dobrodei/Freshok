@@ -1,4 +1,8 @@
 $(function () {
+  $('.product-main__gallery').on('click', function () {
+    $('.product-main__gallerybig').toggleClass('product-main__gallerybig--active')
+  })
+
   $('.product-main__tab').on('click', function(e) {
     e.preventDefault();
     $('.product-main__tab').removeClass('product-main__tab--active')
@@ -93,7 +97,7 @@ $(function () {
     }
   })
 
-  $('.discounts-slider__row, .recent-box__inner').slick({
+  $('.discounts-slider__row, .recent-box__inner, .product-main__gallery, .product-main__gallerybig').slick({
     adaptiveHeight: true,
     nextArrow: '<button type="button" class="slick-arrow slick-arrow--next"><svg><use xlink:href="images/sprite.svg#arrow-right"></use></svg></button>',
     prevArrow: '<button type="button" class="slick-arrow  slick-arrow--prev"><svg><use xlink:href="images/sprite.svg#arrow-left"></use></svg></button>',
