@@ -1,6 +1,24 @@
 $(function () {
-  // catalog__filter
-  $('.product-main__star').rateYo({
+  $('.product-main__gallery').on('click', function () {
+    $('.product-main__gallerybox').toggleClass('product-main__gallerybox--active')
+    $('body').toggleClass('body--lock')
+  })
+
+  $('.product-main__close').on('click', function () {
+    $('.product-main__gallerybox').toggleClass('product-main__gallerybox--active')
+    $('body').toggleClass('body--lock')
+  })
+
+  $('.product-main__tab').on('click', function (e) {
+    e.preventDefault();
+    $('.product-main__tab').removeClass('product-main__tab--active')
+    $(this).addClass('product-main__tab--active');
+
+    $('.product-main__item').removeClass('product-main__item--active')
+    $($(this).attr('href')).addClass('product-main__item--active')
+  })
+
+  $('.raiting').rateYo({
     starWidth: "16px",
     ratedFill: "#FFB800",
     normalFill: "#C1C1C1",
@@ -29,7 +47,7 @@ $(function () {
     $('.product-box__inner').removeClass('product-box__inner--line')
   })
 
-  $('.catalog__select, .product-main__input').styler({
+  $('.catalog__select, .product-main__input, .reviews-box__checkbox').styler({
 
   })
   $(".aside-catalog__range").ionRangeSlider({
@@ -85,7 +103,20 @@ $(function () {
     }
   })
 
-  $('.discounts-slider__row').slick({
+  $('.recent-box__inner').slick({
+    slidesToShow: 1,
+    // slidesToScroll: 1,
+    nextArrow: '<button type="button" class="slick-arrow slick-arrow--next"><svg><use xlink:href="images/sprite.svg#arrow-right"></use></svg></button>',
+    prevArrow: '<button type="button" class="slick-arrow  slick-arrow--prev"><svg><use xlink:href="images/sprite.svg#arrow-left"></use></svg></button>',
+  })
+
+  $('.product-main__gallerybig').slick({
+    nextArrow: '<button type="button" class="slick-arrow slick-arrow--next"><svg><use xlink:href="images/sprite.svg#arrow-right"></use></svg></button>',
+    prevArrow: '<button type="button" class="slick-arrow  slick-arrow--prev"><svg><use xlink:href="images/sprite.svg#arrow-left"></use></svg></button>',
+    dots: true,
+  })
+
+  $('.discounts-slider__row, .recent-box__inner, .product-main__gallery, .product-main__gallerybig').slick({
     adaptiveHeight: true,
     nextArrow: '<button type="button" class="slick-arrow slick-arrow--next"><svg><use xlink:href="images/sprite.svg#arrow-right"></use></svg></button>',
     prevArrow: '<button type="button" class="slick-arrow  slick-arrow--prev"><svg><use xlink:href="images/sprite.svg#arrow-left"></use></svg></button>',
