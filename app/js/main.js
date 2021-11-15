@@ -1,9 +1,15 @@
 $(function () {
   $('.product-main__gallery').on('click', function () {
-    $('.product-main__gallerybig').toggleClass('product-main__gallerybig--active')
+    $('.product-main__gallerybox').toggleClass('product-main__gallerybox--active')
+    $('body').toggleClass('body--lock')
   })
 
-  $('.product-main__tab').on('click', function(e) {
+  $('.product-main__close').on('click', function () {
+    $('.product-main__gallerybox').toggleClass('product-main__gallerybox--active')
+    $('body').toggleClass('body--lock')
+  })
+
+  $('.product-main__tab').on('click', function (e) {
     e.preventDefault();
     $('.product-main__tab').removeClass('product-main__tab--active')
     $(this).addClass('product-main__tab--active');
@@ -97,6 +103,19 @@ $(function () {
     }
   })
 
+  $('.recent-box__inner').slick({
+    slidesToShow: 1,
+    // slidesToScroll: 1,
+    nextArrow: '<button type="button" class="slick-arrow slick-arrow--next"><svg><use xlink:href="images/sprite.svg#arrow-right"></use></svg></button>',
+    prevArrow: '<button type="button" class="slick-arrow  slick-arrow--prev"><svg><use xlink:href="images/sprite.svg#arrow-left"></use></svg></button>',
+  })
+
+  $('.product-main__gallerybig').slick({
+    nextArrow: '<button type="button" class="slick-arrow slick-arrow--next"><svg><use xlink:href="images/sprite.svg#arrow-right"></use></svg></button>',
+    prevArrow: '<button type="button" class="slick-arrow  slick-arrow--prev"><svg><use xlink:href="images/sprite.svg#arrow-left"></use></svg></button>',
+    dots: true,
+  })
+
   $('.discounts-slider__row, .recent-box__inner, .product-main__gallery, .product-main__gallerybig').slick({
     adaptiveHeight: true,
     nextArrow: '<button type="button" class="slick-arrow slick-arrow--next"><svg><use xlink:href="images/sprite.svg#arrow-right"></use></svg></button>',
@@ -136,13 +155,6 @@ $(function () {
         }
       }
     ]
-  })
-
-  $('.recent-box__inner').slick({
-    // slidesToShow: 1,
-    slidesToScroll: 1,
-    // nextArrow: '<button type="button" class="slick-arrow slick-arrow--next"><svg><use xlink:href="images/sprite.svg#arrow-right"></use></svg></button>',
-    //   prevArrow: '<button type="button" class="slick-arrow  slick-arrow--prev"><svg><use xlink:href="images/sprite.svg#arrow-left"></use></svg></button>',
   })
 
   var containerEl1 = $('[data-ref="container-1"]');
