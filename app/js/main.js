@@ -1,5 +1,5 @@
 $(function () {
-  $('.product-main__gallery').on('click', function () {
+  $('.product-main__slide').on('click', function () {
     $('.product-main__gallerybox').toggleClass('product-main__gallerybox--active')
     $('body').toggleClass('body--lock')
   })
@@ -22,6 +22,7 @@ $(function () {
     starWidth: "16px",
     ratedFill: "#FFB800",
     normalFill: "#C1C1C1",
+    spacing: "6px",
     readOnly: true,
     starSvg: 
     "<svg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0.0229578 6.16432C0.0780821 5.9946 0.224738 5.87091 0.401299 5.84529L5.36137 5.12451L7.57965 0.629933C7.65858 0.469933 7.82155 0.368652 7.99996 0.368652C8.17839 0.368652 8.34133 0.469933 8.4203 0.629933L10.6387 5.12451L15.5986 5.84529C15.7752 5.87091 15.9219 5.9946 15.977 6.16429C16.0322 6.334 15.9862 6.52028 15.8584 6.64481L12.2694 10.1434L13.1165 15.0834C13.1467 15.2593 13.0744 15.437 12.9301 15.5419C12.8484 15.6012 12.7517 15.6314 12.6545 15.6314C12.5799 15.6314 12.505 15.6136 12.4364 15.5776L7.99999 13.2451L3.56372 15.5775C3.40576 15.6606 3.21441 15.6467 3.07007 15.5419C2.92573 15.437 2.85338 15.2593 2.88354 15.0834L3.73094 10.1434L0.141551 6.64478C0.0138016 6.52028 -0.0322304 6.334 0.0229578 6.16432Z'/></svg>",
@@ -123,12 +124,22 @@ $(function () {
     nextArrow: '<button type="button" class="slick-arrow slick-arrow--next"><svg><use xlink:href="images/sprite.svg#arrow-right"></use></svg></button>',
     prevArrow: '<button type="button" class="slick-arrow  slick-arrow--prev"><svg><use xlink:href="images/sprite.svg#arrow-left"></use></svg></button>',
     dots: true,
+    fade:true,
+    responsive: [{
+      breakpoint: 1040,
+      settings: {
+        arrows: false,
+        dots: true,
+        slidesToShow: 1,
+      }
+    }, ]
   })
 
   $('.product-main__gallery').slick({
     nextArrow: '<button type="button" class="slick-arrow slick-arrow--next"><svg><use xlink:href="images/sprite.svg#arrow-right"></use></svg></button>',
     prevArrow: '<button type="button" class="slick-arrow  slick-arrow--prev"><svg><use xlink:href="images/sprite.svg#arrow-left"></use></svg></button>',
     dots:false,
+    fade:true,
     responsive: [{
       breakpoint: 800,
       settings: {

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.min.css">
-  <title>Document</title>
+  <title>Freshok</title>
 </head>
 
 <body>
@@ -15,15 +15,15 @@
       <div class="header__top">
         <div class="container header__inner">
           <button class="header__burger">
-            <img src="images/icons/burger-line.svg" alt="">
+            <img src="images/icons/burger-line.svg" alt="картинка открытия меню" width="32" height="22">
           </button>
           <div class="header-menu">
             <div class="header-menu__top">
               <a class="header-menu-logo" href="#">
-                <img src="images/logo.svg" alt="Логотип">
+                <img src="images/logo.svg" alt="Логотип" width="200" height="60">
               </a>
               <button class="header-menu__btn header__burger">
-                <img src="images/icons/close.svg" alt="" width="18" height="18">
+                <img src="images/icons/close.svg" alt="закрыть меню" width="18" height="18">
               </button>
             </div>
             <div class="header-menu__users">
@@ -49,22 +49,22 @@
               <ul class="header-menu__inner">
                 <li class="header-menu__item">
                   <a class="header-menu__social" href="#">
-                    <img src="images/mobile-icon/facebook.svg" alt="">
+                    <img src="images/mobile-icon/facebook.svg" alt="фейсбук" width="32" height="32">
                   </a>
                 </li>
                 <li class="header-menu__item">
                   <a class="header-menu__social" href="#">
-                    <img src="images/mobile-icon/telegram.svg" alt="">
+                    <img src="images/mobile-icon/telegram.svg" alt="телеграм" width="32" height="32">
                   </a>
                 </li>
                 <li class="header-menu__item">
                   <a class="header-menu__social" href="#">
-                    <img src="images/mobile-icon/instagram.svg" alt="">
+                    <img src="images/mobile-icon/instagram.svg" alt="инстаграм" width="32" height="32">
                   </a>
                 </li>
                 <li class="header-menu__item">
                   <a class="header-menu__social" href="#">
-                    <img src="images/mobile-icon/youtube.svg" alt="">
+                    <img src="images/mobile-icon/youtube.svg" alt="ютуб" width="32" height="32">
                   </a>
                 </li>
               </ul>
@@ -128,10 +128,10 @@
             </li>
           </ul>
           <a class="header__link-mobile" href="#">
-            <img src="images/icons/del-address.svg" alt="доставка">
+            <img src="images/icons/del-address.svg" alt="доставка" width="32" height="23">
           </a>
           <a class="header__link-mobile" href="#">
-            <img src="images/icons/tel.svg" alt="телефон">
+            <img src="images/icons/tel.svg" alt="телефон" width="23" height="23">
           </a>
         </div>
       </div>
@@ -339,16 +339,16 @@
             <div class="product-main__bages" style="background-color: #FF7A00;">ХИТ</div>
             <form class="product-main__form" action="#">
               <div class="product-main__code">Код: 0111111</div>
-              <div class="product-main__star raiting" id="rateYo" data-rateyo-rating="4"></div>
+              <div class="product-main__star raiting" data-rateyo-rating="4"></div>
               <div class="product-main__presence" style="color: #63A60E;">В НАЛИЧИИ</div>
             </form>
             <div class="product-main__prices">
               <p class="product-main__old">299 ₽</p>
               <p class="product-main__new">199 ₽</p>
             </div>
-            <form class="product-main__form" action="#">
-              <label class="sr-only" for=""></label>
-              <input class="product-main__input" type="number" value="1" min="0" max="99">
+            <form class="product-main__form product-main__form--cart" action="#">
+              <label class="sr-only" for="product-main__number">Выбрать количество товаров</label>
+              <input class="product-main__input" id="product-main__number" name="number" type="number" value="1" min="0" max="99">
               <button class="product-main__btn btn--primary" type="submit">Добавить в корзину</button>
               <button class="product-main__btn product-main__btn--small btn--primary" type="submit"></button>
               <button class="product-main__like">
@@ -442,7 +442,7 @@
                             10.06.2021
                           </time>
                         </div>
-                        <div class="raiting" id="rateYo" data-rateyo-rating="4"></div>
+                        <div class="raiting" data-rateyo-rating="4"></div>
                       </div>
                       <div class="review-author__text">
                         Яркий цвет, нежный вкус. Очень свежий и приятный, буду пробовать еще!))
@@ -461,7 +461,7 @@
                             7.06.2021
                           </time>
                         </div>
-                        <div class="raiting" id="rateYo" data-rateyo-rating="5"></div>
+                        <div class="raiting" data-rateyo-rating="5"></div>
                       </div>
                       <div class="review-author__text">
                         Цвет, конечно, очень насыщенный! Ожидаешь, что и вкус будет такой же яркий (просто взрыв), но нет. Вкус "сдержанно-сладкий" и очень-очень свежий! Рад, что есть такая возможность - пробовать экзотические фрукты.
@@ -473,26 +473,26 @@
                 <form class="reviews-box__form" action="#">
                   <div class="reviews-box__raiting">
                     <span class="reviews-box__text">Ваша оценка*</span>
-                    <div class="raiting" id="rateYo" data-rateyo-rating="0" data-rateyo-read-only="false"></div>
+                    <div class="raiting" data-rateyo-rating="0" data-rateyo-read-only="false"></div>
                   </div>
                   <div class="reviews-box__inner">
                     <label class="reviews-box__label" for="reviews-box__textarea">
                       <span class="reviews-box__text">Ваш отзыв *</span>
-                      <textarea class="reviews-box__textarea" id="reviews-box__textarea" name="textarea" placeholder="Введите текст отзыва"></textarea>
+                      <textarea class="reviews-box__textarea" id="reviews-box__textarea" name="textarea" placeholder="Введите текст отзыва" required></textarea>
                     </label>
                     <div class="reviews-box__inputs">
                       <label class="reviews-box__label" for="reviews-box__text">
                         <span class="reviews-box__text">Имя</span>
-                        <input class="reviews-box__input" id="reviews-box__text" placeholder="Введите ваше имя" type="text">
+                        <input class="reviews-box__input" id="reviews-box__text" placeholder="Введите ваше имя" name="name" type="text" required>
                       </label>
                       <label class="reviews-box__label" for="reviews-box__email">
                         <span class="reviews-box__text">Email *</span>
-                        <input class="reviews-box__input" id="reviews-box__email" placeholder="youremail@mail.com" type="email">
+                        <input class="reviews-box__input" id="reviews-box__email" placeholder="youremail@mail.com" name="email" type="email" required>
                       </label>
                     </div>
                   </div>
                   <label class="reviews-box__label" for="reviews-box__checkbox">
-                    <input class="reviews-box__checkbox" id="reviews-box__checkbox" type="checkbox">
+                    <input class="reviews-box__checkbox" id="reviews-box__checkbox" name="checkbox" type="checkbox">
                     Сохранить моё имя, email и адрес сайта в этом браузере для последующих моих комментариев.
                   </label>
                   <button class="reviews-box__btn btn--primary">Оставить отзыв</button>
@@ -510,87 +510,6 @@
           <li class="recent-box__item">
             <ul class="product-box__inner card--grid">
               <li class="mix category-a">
-                <article class="product-card product-card--catalog product-card--new product-card--sale">
-                  <span class="product-card__sale">-50%</span>
-                  <button class="product-card__like" type="button">
-                    <span class="sr-only">Добавить в избранные</span>
-                    <svg class="">
-                      <use xlink:href="images/sprite.svg#heart"></use>
-                    </svg>
-                  </button>
-                  <img class="product-card__img" src="images/products/1.jpg" width="300" height="225" alt="Ананас">
-                  <div class="product-card__inner">
-                    <h3 class="product-card__name">
-                      Ананас, 1кг
-                    </h3>
-                    <div class="product-card__box">
-                      <div class="product-card__prices">
-                        <span class="product-card__old">1999 ₽</span>
-                        <span class="product-card__now">999 ₽ </span>
-                      </div>
-                      <button class="product-card__cart" type="button">
-                        <span class="sr-only">Добавить в корзину</span>
-                      </button>
-                    </div>
-                    <span class="product-card__raiting">4.5</span>
-                  </div>
-                </article>
-              </li>
-              <li class="mix category-a">
-                <article class="product-card product-card--catalog">
-                  <span class="product-card__sale">-50%</span>
-                  <button class="product-card__like" type="button">
-                    <span class="sr-only">Добавить в избранные</span>
-                    <svg class="">
-                      <use xlink:href="images/sprite.svg#heart"></use>
-                    </svg>
-                  </button>
-                  <img class="product-card__img" src="images/products/2.jpg" width="300" height="225" alt="Лимон">
-                  <div class="product-card__inner">
-                    <h3 class="product-card__name">
-                      Лимон, 1кг
-                    </h3>
-                    <div class="product-card__box">
-                      <div class="product-card__prices">
-                        <span class="product-card__old">1999 ₽</span>
-                        <span class="product-card__now">999 ₽ </span>
-                      </div>
-                      <button class="product-card__cart" type="button">
-                        <span class="sr-only">Добавить в коризину</span>
-                      </button>
-                    </div>
-                    <span class="product-card__raiting">4.5</span>
-                  </div>
-                </article>
-              </li>
-              <li class="mix category-a">
-                <article class="product-card product-card--catalog product-card--hit">
-                  <span class="product-card__sale">-50%</span>
-                  <button class="product-card__like" type="button">
-                    <span class="sr-only">Добавить в избранные</span>
-                    <svg class="">
-                      <use xlink:href="images/sprite.svg#heart"></use>
-                    </svg>
-                  </button>
-                  <img class="product-card__img" src="images/products/3.jpg" width="300" height="225" alt="Питахайа красная">
-                  <div class="product-card__inner">
-                    <h3 class="product-card__name">
-                      Питахайя красная с белой мякотью, 1шт
-                    </h3>
-                    <div class="product-card__box">
-                      <div class="product-card__prices">
-                        <span class="product-card__old">1999 ₽</span>
-                        <span class="product-card__now">1019 ₽ </span>
-                      </div>
-                      <button class="product-card__cart" type="button">
-                        <span class="sr-only">Добавить в коризину</span>
-                      </button>
-                    </div>
-                    <span class="product-card__raiting">4.5</span>
-                  </div>
-                </article>
-              </li>
-              <li class="mix category-b">
                 <article class="product-card product-card--catalog product-card--hit product-card--absent">
                   <span class="product-card__sale">50%</span>
                   <button class="product-card__like" type="button">
@@ -608,6 +527,87 @@
                       <div class="product-card__prices">
                         <span class="product-card__old">1999 ₽</span>
                         <span class="product-card__now">49 ₽ </span>
+                      </div>
+                      <button class="product-card__cart" type="button">
+                        <span class="sr-only">Добавить в корзину</span>
+                      </button>
+                    </div>
+                    <span class="product-card__raiting">4.5</span>
+                  </div>
+                </article>
+              </li>
+              <li class="mix category-a">
+                <article class="product-card product-card--catalog product-card--sale">
+                  <span class="product-card__sale">-30%</span>
+                  <button class="product-card__like" type="button">
+                    <span class="sr-only">Добавить в избранные</span>
+                    <svg class="">
+                      <use xlink:href="images/sprite.svg#heart"></use>
+                    </svg>
+                  </button>
+                  <img class="product-card__img" src="images/products/6.jpg" width="300" height="225" alt="Напиток">
+                  <div class="product-card__inner">
+                    <h3 class="product-card__name">
+                      Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин безалкогольн...
+                    </h3>
+                    <div class="product-card__box">
+                      <div class="product-card__prices">
+                        <span class="product-card__old">299 ₽</span>
+                        <span class="product-card__now">199 ₽ </span>
+                      </div>
+                      <button class="product-card__cart" type="button">
+                        <span class="sr-only">Добавить в корзину</span>
+                      </button>
+                    </div>
+                    <span class="product-card__raiting">4.5</span>
+                  </div>
+                </article>
+              </li>
+              <li class="mix category-a">
+                <article class="product-card product-card--catalog product-card--new product-card--finish">
+                  <span class="product-card__sale">-50%</span>
+                  <button class="product-card__like" type="button">
+                    <span class="sr-only">Добавить в избранные</span>
+                    <svg class="">
+                      <use xlink:href="images/sprite.svg#heart"></use>
+                    </svg>
+                  </button>
+                  <img class="product-card__img" src="images/products/7.jpg" width="300" height="225" alt="Кофе">
+                  <div class="product-card__inner">
+                    <h3 class="product-card__name">
+                      Кофе с коноплей органический Caffé Salomoni 250г
+                    </h3>
+                    <div class="product-card__box">
+                      <div class="product-card__prices">
+                        <span class="product-card__old">1999 ₽</span>
+                        <span class="product-card__now">877 ₽ </span>
+                      </div>
+                      <button class="product-card__cart" type="button">
+                        <span class="sr-only">Добавить в корзину</span>
+                      </button>
+                    </div>
+                    <span class="product-card__raiting">4.5</span>
+                  </div>
+                </article>
+              </li>
+              <li class="mix category-b">
+                <article class="product-card product-card--catalog product-card--new product-card--finish">
+                  <span class="product-card__sale">-50%</span>
+                  <button class="product-card__like" type="button">
+                    <span class="sr-only">Добавить в избранные</span>
+                    <svg class="">
+                      <use xlink:href="images/sprite.svg#heart"></use>
+                    </svg>
+                  </button>
+                  <img class="product-card__img" src="images/products/7.jpg" width="300" height="225" alt="Кофе">
+                  <div class="product-card__inner">
+                    <h3 class="product-card__name">
+                      Кофе с коноплей органический Caffé Salomoni 250г
+                    </h3>
+                    <div class="product-card__box">
+                      <div class="product-card__prices">
+                        <span class="product-card__old">1999 ₽</span>
+                        <span class="product-card__now">877 ₽ </span>
                       </div>
                       <button class="product-card__cart" type="button">
                         <span class="sr-only">Добавить в корзину</span>
@@ -940,8 +940,8 @@
             <p>© 2021 ФРЕШОК</p>
           </div>
           <div class="footer__paymet">
-            <img class="footer__pay" src="images/icons/visa.svg" alt="" width="93" height="29">
-            <img class="footer__pay" src="images/icons/master-card.svg" alt="" width="49" height="29">
+            <img class="footer__pay" src="images/icons/visa.svg" alt="способ оплаты виза" width="93" height="29">
+            <img class="footer__pay" src="images/icons/master-card.svg" alt="способ оплаты мастеркард" width="49" height="29">
           </div>
         </div>
       </div>
